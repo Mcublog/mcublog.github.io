@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "d29d3436-25b6-43ee-ade9-c7b74cf97107",
+		"name": "LK_HUB_tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "viki_poll_ask_for_task",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dms6RcU62YhFxKLPKdwYjQBqaZU7V4Wv",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "viki",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"task_results\": []\r\n  },\r\n  \"uuid\": \"93ced6eb-6b4d-4d3d-b97f-61ded136e9d6\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hub-test.crystals.ru/printers/v1/poll/v3",
+					"protocol": "https",
+					"host": [
+						"hub-test",
+						"crystals",
+						"ru"
+					],
+					"path": [
+						"printers",
+						"v1",
+						"poll",
+						"v3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viki_poll_task_result",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dms6RcU62YhFxKLPKdwYjQBqaZU7V4Wv",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "viki",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"task_results\": [\r\n      {\r\n        \"task_id\": \"400002741\",\r\n        \"result\": \"SUCCESS\"\r\n      }  \r\n    ]\r\n  },\r\n  \"uuid\": \"93ced6eb-6b4d-4d3d-b97f-61ded136e9d6\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hub-test.crystals.ru/printers/v1/poll/v3",
+					"protocol": "https",
+					"host": [
+						"hub-test",
+						"crystals",
+						"ru"
+					],
+					"path": [
+						"printers",
+						"v1",
+						"poll",
+						"v3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cash_info_report",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dms6RcU62YhFxKLPKdwYjQBqaZU7V4Wv",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "viki",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"versions\": [\r\n      {\r\n        \"type\": \"COM_PROXY\",\r\n        \"version\": \"2.5.0\",\r\n        \"remote_updatable\": true,\r\n        \"project\": \"CSI\",\r\n        \"product\": \"ComProxy\"\r\n      },\r\n      {\r\n        \"type\": \"FIRMWARE\",\r\n        \"version\": \"565.1.16\",\r\n        \"remote_updatable\": true,\r\n        \"project\": \"CSI\",\r\n        \"product\": \"Firmware\"\r\n      },\r\n      {\r\n        \"type\": \"FITO\",\r\n        \"version\": \"0.0.0\",\r\n        \"remote_updatable\": true,\r\n        \"project\": \"CSI\",\r\n        \"product\": \"Fito\"\r\n      }\r\n    ],\r\n    \"shop_info\": {\r\n      \"legal_name\": \"Кристалл Сервис                 Интеграция\",\r\n      \"address\": \"Россия, 188230, Ленинградская обл, г Луга      пр-кт Урицкого, д 77 к 3 пом. 10\",\r\n      \"inn\": \"7802781104\",\r\n      \"real_address\": \"Чкаловский 50, кабинет 340\"\r\n    },\r\n    \"kkt_info\": {\r\n      \"kkt_factory_number\": \"0128999999\",\r\n      \"kkt_registry_name\": \"ПИРИТ 2Ф\",\r\n      \"fn_number\": \"9999078902010773\",\r\n      \"ffd_version\": \"1.2\",\r\n      \"fn_registered\": true\r\n    },\r\n    \"kkt_registration_info\": {\r\n      \"registry_number\": \"0000000007045877\",\r\n      \"tax_modes\": [\r\n        \"DEFAULT\"\r\n      ],\r\n      \"autonomic\": false,\r\n      \"sender_email\": \"noreply@taxcom.ru\",\r\n      \"ofd_provider\": {\r\n        \"server_host\": \"f1test.taxcom.ru\",\r\n       \"name\": \"ТАКСКОМ\",\r\n        \"inn\": \"7704211201\",\r\n        \"server_port\": \"7778\",\r\n        \"check_url\": \"www.nalog.gov.ru\"\r\n      },\r\n      \"work_modes\": [\r\n        \"SERVICES\",\r\n        \"EXCISE\",\r\n        \"GAMBLING\",\r\n        \"BANK_PAY_AGENT\",\r\n        \"BANK_PAY_SUB_AGENT\",\r\n        \"PAY_AGENTS\",\r\n        \"PAY_SUB_AGENT\",\r\n        \"ATTORNEY\",\r\n        \"COMMISSIONAIRE\",\r\n        \"AGENT\",\r\n        \"LOTTERY\"\r\n      ],\r\n      \"result\": \"\"\r\n    },\r\n    \"is_fn\": true,\r\n    \"kkt_expire_date\": \"2023-07-03T00:00:00\",\r\n    \"automatic_device_number\": \"\",\r\n    \"local_time\": \"2022-05-19T11:56:11+03:00\"\r\n  },\r\n  \"uuid\": \"93ced6eb-6b4d-4d3d-b97f-61ded136e9d6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hub-test.crystals.ru/printers/v1/cash_info_report/v1",
+					"protocol": "https",
+					"host": [
+						"hub-test",
+						"crystals",
+						"ru"
+					],
+					"path": [
+						"printers",
+						"v1",
+						"cash_info_report",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viki_handshake",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dms6RcU62YhFxKLPKdwYjQBqaZU7V4Wv",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "viki",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"methods\": {\r\n      \"out\": {\r\n        \"handshake\": \"2\",\r\n        \"cash_info_report\": \"1\",\r\n        \"poll\": \"3\",\r\n        \"counters_report\": \"1\",\r\n        \"registration_report\": \"1\"\r\n      },\r\n      \"in\": {\r\n        \"update_software\": \"1\",\r\n        \"registration\": \"1\"\r\n      }\r\n    }\r\n  },\r\n  \"uuid\": \"93ced6eb-6b4d-4d3d-b97f-61ded136e9d6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hub-test.crystals.ru/printers/v1/handshake/v2",
+					"protocol": "https",
+					"host": [
+						"hub-test",
+						"crystals",
+						"ru"
+					],
+					"path": [
+						"printers",
+						"v1",
+						"handshake",
+						"v2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viki_counters_report",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dms6RcU62YhFxKLPKdwYjQBqaZU7V4Wv",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "viki",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"unsent_ofd_documents_count\": \"456\",\r\n    \"shift_status\": \"CLOSE\"\r\n  },\r\n  \"uuid\": \"93ced6eb-6b4d-4d3d-b97f-61ded136e9d6\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hub-test.crystals.ru/printers/v1/counters_report/v1",
+					"protocol": "https",
+					"host": [
+						"hub-test",
+						"crystals",
+						"ru"
+					],
+					"path": [
+						"printers",
+						"v1",
+						"counters_report",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ERROR_Task_Result",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Dms6RcU62YhFxKLPKdwYjQBqaZU7V4Wv",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "viki",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\": {\r\n    \"task_results\": [\r\n      {\r\n        \"message\": \"ЖопаХуй\",\r\n        \"error_code\": \"1\",\r\n        \"task_id\": \"400002740\",\r\n        \"result\": \"ERROR\"\r\n      }\r\n    ]\r\n  },\r\n  \"uuid\": \"93ced6eb-6b4d-4d3d-b97f-61ded136e9d6\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hub-test.crystals.ru/printers/v1/poll/v3",
+					"protocol": "https",
+					"host": [
+						"hub-test",
+						"crystals",
+						"ru"
+					],
+					"path": [
+						"printers",
+						"v1",
+						"poll",
+						"v3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
